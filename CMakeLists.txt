@@ -6,7 +6,7 @@ add_library (hellolib hellolib.cpp hellolib.h)
 target_include_directories(hellolib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Set public headers property
-set_target_properties(hellolib PROPERTIES PUBLIC_HEADER mylib.h)
+set_target_properties(hellolib PROPERTIES PUBLIC_HEADER hellolib.h)
 
 # Set C compiler standard
 set_property(TARGET hellolib PROPERTY CXX_STANDARD 20)
