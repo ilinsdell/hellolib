@@ -12,4 +12,4 @@ set_target_properties(hellolib PROPERTIES PUBLIC_HEADER mylib.h)
 set_property(TARGET hellolib PROPERTY CXX_STANDARD 20)
 
 # Install library and header
-install(TARGETS hellolib PUBLIC_HEADER DESTINATION include)
+install(DIRECTORY hellolib DESTINATION include)
