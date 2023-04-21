@@ -5,8 +5,11 @@ add_library (hellolib hellolib.cpp hellolib.h)
 # when other libraries or executables link to hellolib
 target_include_directories(hellolib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
+# Set public headers property
+set_target_properties(hellolib PROPERTIES PUBLIC_HEADER mylib.h)
+
 # Set C compiler standard
 set_property(TARGET hellolib PROPERTY CXX_STANDARD 20)
 
-# Header-only
-install(DIRECTORY hellolib DESTINATION include)
+# Install library and header
+install(TARGETS hellolib PUBLIC_HEADER DESTINATION /hellolib )
