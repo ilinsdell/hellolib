@@ -7,3 +7,6 @@ target_include_directories(hellolib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Set C compiler standard
 set_property(TARGET hellolib PROPERTY CXX_STANDARD 20)
+
+# Header-only
+install(DIRECTORY hellolib DESTINATION include)
